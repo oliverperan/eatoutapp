@@ -15,8 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCNbLrRI9vs-rBbJfK8vVX7huTDWU-gfgs" />
+            android:name="put your api key here"
+            android:value="" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
