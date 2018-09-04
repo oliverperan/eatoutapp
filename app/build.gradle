@@ -4,9 +4,9 @@ android {
     signingConfigs {
         config {
             keyAlias 'oliverperan'
-            keyPassword 'Ikjon65w'
+            keyPassword 'xxxxx'
             storeFile file("$rootDir/keystore.jks")
-            storePassword 'Ikjon65w'
+            storePassword 'xxxxxx'
         }
     }
     compileSdkVersion 26
