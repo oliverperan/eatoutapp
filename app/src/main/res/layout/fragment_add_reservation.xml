@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/clAddReservation"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/margin_small"
+    android:layout_marginBottom="@dimen/margin_small"
+    >
+    <TextView
+        android:id="@+id/tCaptionSelectDate"
+        android:textStyle="bold"
+        android:text="@string/select_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/btSelectDateAndTime"
+        android:src="@drawable/calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        app:layout_constraintTop_toBottomOf="@id/tCaptionSelectDate"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:contentDescription="@string/select_date_time"
+        />
+
+
+    <ImageView
+        android:id="@+id/btSave"
+        android:src="@drawable/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tCaptionSelectDate"
+        app:layout_constraintStart_toEndOf="@+id/btSelectDateAndTime"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:contentDescription="@string/st_save"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/lDateTimeSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/btSelectDateAndTime"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DateAndTimeOfTheReservation"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvDateTimeSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_tiny"
+
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lObservations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/lDateTimeSelected"
+        >
+
+        <TextView
+            android:text="@string/Observations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/edObservations"
+            />
+        <EditText
+            android:id="@+id/edObservations"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:minLines="6"
+            android:gravity="top|start"
+            android:maxLines="10"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+        />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

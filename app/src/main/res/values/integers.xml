@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="w185_width">185</integer>
+    <integer name="w278_height">278</integer>
+    <integer name="default_max_number_requests">40</integer>
+</resources>

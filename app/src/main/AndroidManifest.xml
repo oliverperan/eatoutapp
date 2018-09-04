@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rizosoft.eatoutapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/iconapp"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/iconapp"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCNbLrRI9vs-rBbJfK8vVX7huTDWU-gfgs" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RestaurantResultSearchActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rizosoft.eatoutapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RestaurantDetailActivity"
+            android:parentActivityName=".RestaurantResultSearchActivity"
+            android:windowSoftInputMode="stateUnchanged|adjustResize"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rizosoft.eatoutapp.RestaurantResultSearchActivity" />
+        </activity>
+        <activity
+            android:name=".CreditsActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rizosoft.eatoutapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AllReservationsActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rizosoft.eatoutapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rizosoft.eatoutapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".LocateInMapActivity"
+            android:parentActivityName=".AllReservationsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rizosoft.eatoutapp.AllReservationsActivity" />
+        </activity>
+
+        <provider
+            android:name=".providers.ReservationProvider"
+            android:authorities="com.rizosoft.eatoutapp"
+            android:exported="false" />
+
+        <activity
+            android:name=".SeeObservationsActivity"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <receiver android:name=".ReservationsWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/reservations_widget_info" />
+        </receiver>
+        <service android:name=".services.RefresWidgetService" />
+        <service android:name=".services.CleanReservationsService"/>
+    </application>
+
+</manifest>

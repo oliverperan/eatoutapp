@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.preference.PreferenceCategory
+        android:title="@string/restaurants_per_request">
+        <android.support.v7.preference.ListPreference
+            android:key="@string/number_options_request"
+            android:title="@string/restaurants_per_request"
+            android:dialogTitle="@string/restaurants_per_request"
+            android:entries="@array/entries_list_number_restaurant"
+            android:entryValues="@array/values_list_number_restaurant" />
+    </android.support.v7.preference.PreferenceCategory>
+
+</android.support.v7.preference.PreferenceScreen>

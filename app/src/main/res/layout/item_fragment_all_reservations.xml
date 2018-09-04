@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/corner_radius"
+    app:cardElevation="@dimen/card_elevation"
+    android:layout_marginTop="@dimen/margin_small"
+    android:layout_marginBottom="@dimen/margin_small"
+    android:layout_marginStart="@dimen/margin_small"
+    android:layout_marginEnd="@dimen/margin_small"
+    android:background="@drawable/back_result_search"
+    >
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/margin_small"
+    android:layout_marginEnd="@dimen/margin_small"
+    >
+    <TextView
+        android:id="@+id/tvDateTimeReservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="January 10th 2018 21:20"
+        />
+
+    <TextView
+        android:id="@+id/tvRestaurantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintTop_toBottomOf="@id/tvDateTimeReservation"
+        tools:text="restaurant name"
+        />
+
+    <Button
+        android:id="@+id/btSeeObservations"
+        android:drawableStart="@drawable/eye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/see_observations"
+        android:drawablePadding="@dimen/margin_tiny"
+        android:textAlignment="center"
+        android:padding="0dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/tvRestaurantName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/margin_small"
+        />
+    <Button
+        android:id="@+id/btLocateMap"
+        android:drawableStart="@drawable/map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/locate_in_map"
+        android:textAlignment="center"
+        android:padding="0dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/tvRestaurantName"
+        app:layout_constraintStart_toEndOf="@id/btSeeObservations"
+        android:drawablePadding="@dimen/margin_tiny"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/margin_small"
+        />
+
+
+    <Button
+        android:id="@+id/btCancelReservation2"
+        android:drawableStart="@drawable/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_reservation"
+        android:textAlignment="center"
+        android:padding="0dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintTop_toBottomOf="@id/btSeeObservations"
+        app:layout_constraintStart_toStartOf="parent"
+        android:drawablePadding="@dimen/margin_tiny"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
